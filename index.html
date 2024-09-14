@@ -29,45 +29,52 @@
         <!-- Container for the sign-up form -->
         <div class="signup__form-container">
           <header class="signup__header">
-            <img
-              src="./assets/images/illustration-sign-up-mobile.svg"
-              alt="Sign up illustration"
-              class="signup__image"
-            />
+            <picture>
+              <source
+                srcset="./assets/images/illustration-sign-up-desktop.svg"
+                media="(min-width: 48rem)"
+              />
+              <img
+                src="./assets/images/illustration-sign-up-mobile.svg"
+                alt="Sign up illustration"
+                class="signup__image"
+              />
+            </picture>
           </header>
 
- <div class="signup__wrapper">
-           <section class="signup__content">
-            <h1 class="signup__title">Stay updated!</h1>
-            <p class="signup__info">
-              Join 60,000+ product managers receiving monthly updates on:
-            </p>
-            <ul class="signup__list">
-              <li class="signup__list-item">
-                Product discovery and building what matters
-              </li>
-              <li class="signup__list-item">
-                Measuring to ensure updates are a success
-              </li>
-              <li class="signup__list-item">And much more!</li>
-            </ul>
-          </section>
-          <section class="signup__cta">
-            <form action="" class="signup__form">
-              <label for="email" class="signup__label">Email address</label>
-              <input
-                type="email"
-                class="signup__input"
-                id="email"
-                name="email"
-                placeholder="email@company.com"
-              />
-              <button type="submit" class="signup__submit-btn">
-                Subscribe to monthly newsletter
-              </button>
-            </form>
-          </section>
- </div>
+          <div class="signup__wrapper">
+            <section class="signup__content">
+              <h1 class="signup__title">Stay updated!</h1>
+              <p class="signup__info">
+                Join 60,000+ product managers receiving monthly updates on:
+              </p>
+              <ul class="signup__list">
+                <li class="signup__list-item">
+                  Product discovery and building what matters
+                </li>
+                <li class="signup__list-item">
+                  Measuring to ensure updates are a success
+                </li>
+                <li class="signup__list-item">And much more!</li>
+              </ul>
+            </section>
+            <section class="signup__cta">
+              <form action="" class="signup__form">
+                <label for="email" class="signup__label">Email address</label>
+                <span class="signup__error">xxx</span>
+                <input
+                  type="email"
+                  class="signup__input"
+                  id="email"
+                  name="email"
+                  placeholder="email@company.com"
+                />
+                <button type="submit" class="signup__submit-btn">
+                  Subscribe to monthly newsletter
+                </button>
+              </form>
+            </section>
+          </div>
         </div>
 
         <!-- Container for the success message -->
