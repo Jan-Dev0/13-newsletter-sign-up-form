@@ -34,19 +34,19 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://jan-dev0.github.io/13-newsletter-sign-up-form)
-- Live Site URL: [Add live site URL here](https://github.com/Jan-Dev0/13-newsletter-sign-up-form)
+- [Solution URL](https://github.com/Jan-Dev0/13-newsletter-sign-up-form)
+- [Live Site URL](https://jan-dev0.github.io/13-newsletter-sign-up-form)
 
 ## My process
 
 ### Built with
 
+- Mobile-first workflow
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- Mobile-first workflow
 - JavaScript
 
 ## Author
 
-- Frontend Mentor - [@Jan-Dev0](https://www.frontendmentor.io/profile/Jan-Dev0
+- Frontend Mentor - [@Jan-Dev0](https://www.frontendmentor.io/profile/Jan-Dev0)
