@@ -164,6 +164,7 @@ main {
 }
 
 /* Success message styles */
+
 .signup__success-container {
   display: none;
   border-radius: 20px;
@@ -201,15 +202,23 @@ main {
 }
 
 
-.signup--success .signup__success-container {
+/* Initial Style for success message */
+.signup__success-container {
+    display: none; /* Success message hidden initially */
+  }
+  
+  /* Success message display when signup--success class is present */
+  .signup--success .signup__success-container {
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
-}
-.signup--success .signup__form-container {
+  }
+  
+  /* Hide form container when signup--success class is present */
+  .signup--success .signup__form-container {
     display: none;
-}
-
+  }
+  
 /* Break Points */
 /*
 # tablet    ≥ 768px = 48rem
@@ -247,6 +256,7 @@ margin: 0;
 .success-message__dismiss-btn {
     margin-top: 3.2rem;
 }
+  
 } 
 
 /**
@@ -261,3 +271,5 @@ margin: 0;
 .error-message {
 	color: red
 }
+
+
