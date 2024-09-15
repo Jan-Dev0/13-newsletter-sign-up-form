@@ -39,7 +39,7 @@ h6 {
 :root {
   /* ### Primary */
 
-  --tomato: #ff6257;
+  --tomato: hsl(4, 100%, 67%);
 
   /* ### Neutral */
 
@@ -166,6 +166,48 @@ main {
 /* Success message styles */
 .signup__success-container {
   display: none;
+  border-radius: 20px;
+  margin: 6rem 0;
+  padding: 3.2rem;
+  max-width: 37.5rem;
+
+}
+.success-message__icon {
+    width: 6rem;
+    height: 6rem;
+}
+.success-message__title {
+    font-size: 4.8rem;;
+}
+.success-message__text {
+    line-height: 1.5;
+}
+.success-message__email-address {
+    font-weight: 700;
+}
+.success-message__dismiss-btn {
+  width: 100%;
+  margin-top: 20rem;
+  padding: 2rem 3.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+}
+.success-message__dismiss-btn:hover {
+  background: linear-gradient(90deg, var(--pink), var(--tomato));
+}
+
+
+.signup--success .signup__success-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+.signup--success .signup__form-container {
+    display: none;
 }
 
 /* Break Points */
@@ -180,6 +222,7 @@ main {
   .signup {
     padding: 2rem;
     border-radius: 30px;  
+    
   }
   .signup__form-container {
     flex-direction: row-reverse;
@@ -194,5 +237,27 @@ main {
     font-size: 5.6rem;
     margin-bottom: 3.2rem;
 }
+.signup__success-container {
+margin: 0;
+}
+.success-message__title {
+    max-width: 50rem;
+    font-size: 5.4rem;
+}
+.success-message__dismiss-btn {
+    margin-top: 3.2rem;
+}
+} 
 
+/**
+ * Form Validation Errors
+ */
+.error {
+	border-color: var(--tomato);
+    color: var(--tomato);
+    background-color: hsl(4, 100%, 67%, 0.1);
+}
+
+.error-message {
+	color: red
 }

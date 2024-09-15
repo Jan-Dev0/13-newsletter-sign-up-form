@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer@1/dist/bouncer.polyfills.min.js"></script>
     <script src="main.js" defer></script>
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
@@ -62,7 +63,7 @@
               <form action="" class="signup__form">
                 <div class="signup__label-wrapper">
                   <label for="email" class="signup__label">Email address</label>
-                  <span class="signup__error">Invalid email</span>
+                  <span class="signup__error" id="email-error"></span>
                 </div>
                 <input
                   type="email"
@@ -70,6 +71,8 @@
                   id="email"
                   name="email"
                   placeholder="email@company.com"
+                  data-bouncer-target="#email-error"
+                  required
                 />
                 <button type="submit" class="signup__submit-btn">
                   Subscribe to monthly newsletter
@@ -81,9 +84,10 @@
 
         <!-- Container for the success message -->
         <div class="signup__success-container">
+          <img src="./assets/images/icon-success.svg" alt="Succes icon" class="success-message__icon">
           <h2 class="success-message__title">Thanks for subscribing!</h2>
           <p class="success-message__text">
-            A confirmation email has been sent to your email. Please open it and
+            A confirmation email has been sent to <span class="success-message__email-address"></span>. Please open it and
             click the button inside to confirm your subscription.
           </p>
           <button class="success-message__dismiss-btn">Dismiss message</button>
