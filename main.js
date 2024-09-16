@@ -24,16 +24,13 @@ validator
   .onSuccess((event) => {
     event.preventDefault();
 
-   
-      successContainer.classList.toggle("hidden", false);
-      formContainer.classList.toggle("hidden", true);
-
+    successContainer.classList.toggle("hidden", false);
+    formContainer.classList.toggle("hidden", true);
   });
 
 dismissBtn.addEventListener("click", () => {
-
-successContainer.classList.toggle("hidden", true);
-formContainer.classList.toggle("hidden", false);
+  successContainer.classList.toggle("hidden", true);
+  formContainer.classList.toggle("hidden", false);
 
   signupForm.reset();
 });
