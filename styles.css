@@ -125,21 +125,16 @@ main {
 /* Cta styles */
 
 .signup__label-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem; 
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
 
 .signup__label {
   font-size: 1.2rem;
   font-weight: 700;
-  
 }
-.signup__error {
-    font-size: 1.2rem;
-    color: red; 
-  }
 
 .signup__input {
   width: 100%;
@@ -164,29 +159,29 @@ main {
 }
 
 /* Success message styles */
-
-.signup__success-container {
-  display: none;
+.signup__success {
   border-radius: 20px;
   margin: 6rem 0;
   padding: 3.2rem;
   max-width: 37.5rem;
-
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
 }
-.success-message__icon {
-    width: 6rem;
-    height: 6rem;
+.signup__success-icon {
+  width: 6rem;
+  height: 6rem;
 }
-.success-message__title {
-    font-size: 4.8rem;;
+.signup__success-title {
+  font-size: 4.8rem;
 }
-.success-message__text {
-    line-height: 1.5;
+.signup__success-text {
+  line-height: 1.5;
 }
-.success-message__email-address {
-    font-weight: 700;
+.signup__success-email-address {
+  font-weight: 700;
 }
-.success-message__dismiss-btn {
+.signup__success-dismiss-btn {
   width: 100%;
   margin-top: 20rem;
   padding: 2rem 3.2rem;
@@ -197,28 +192,14 @@ main {
   font-weight: 700;
   cursor: pointer;
 }
-.success-message__dismiss-btn:hover {
+.signup__success-dismiss-btn:hover {
   background: linear-gradient(90deg, var(--pink), var(--tomato));
 }
 
+.hidden {
+  display: none;
+}
 
-/* Initial Style for success message */
-.signup__success-container {
-    display: none; /* Success message hidden initially */
-  }
-  
-  /* Success message display when signup--success class is present */
-  .signup--success .signup__success-container {
-    display: flex;
-    flex-direction: column;
-    gap: 3.2rem;
-  }
-  
-  /* Hide form container when signup--success class is present */
-  .signup--success .signup__form-container {
-    display: none;
-  }
-  
 /* Break Points */
 /*
 # tablet    ≥ 768px = 48rem
@@ -230,46 +211,43 @@ main {
 @media (min-width: 48rem) {
   .signup {
     padding: 2rem;
-    border-radius: 30px;  
-    
+    border-radius: 30px;
   }
   .signup__form-container {
     flex-direction: row-reverse;
     align-items: center;
     gap: 4rem;
-}
-.signup__wrapper {
+  }
+  .signup__wrapper {
     padding: 0 4rem;
     max-width: 50%;
-}
-.signup__title {
+  }
+  .signup__title {
     font-size: 5.6rem;
     margin-bottom: 3.2rem;
-}
-.signup__success-container {
-margin: 0;
-}
-.success-message__title {
+  }
+  .signup__success {
+    margin: 0;
+  }
+  .signup__success-title {
     max-width: 50rem;
     font-size: 5.4rem;
-}
-.success-message__dismiss-btn {
+  }
+  .signup__success-dismiss-btn {
     margin-top: 3.2rem;
+  }
 }
-  
-} 
 
 /**
  * Form Validation Errors
  */
 .error {
-	border-color: var(--tomato);
-    color: var(--tomato);
-    background-color: hsl(4, 100%, 67%, 0.1);
+  border-color: var(--tomato);
+  color: var(--tomato);
+  background-color: hsl(4, 100%, 67%, 0.1);
 }
 
-.error-message {
-	color: red
+.signup__error-message {
+  font-size: 1.2rem;
+  color: red;
 }
-
-

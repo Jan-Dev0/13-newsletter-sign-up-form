@@ -1,34 +1,39 @@
-var validate = new Bouncer("#signup-form", {
-  messageAfterField: false,
-});
-
-const signupForm = document.querySelector("#signup-form");
+const signupForm = document.querySelector(".signup__form");
 const signup = document.querySelector(".signup");
-const successContainer = document.querySelector(".signup__success-container");
+const successContainer = document.querySelector(".signup__success");
 const formContainer = document.querySelector(".signup__form-container");
+const dismissBtn = document.querySelector(".signup__success-dismiss-btn");
 
-signupForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  // Run Bouncer validation manually
-  var invalidFields = validate.validateAll(signupForm);
-
-  if (invalidFields.length === 0) {
-    const input = document.querySelector("#email");
-    const span = document.querySelector(".success-message__email-address");
-    span.textContent = input.value;
-
-    // Add the success class and hide the form container
-    signup.classList.add("signup--success");
-    successContainer.style.display = "flex";
-    formContainer.style.display = "none";
-  }
+const validator = new JustValidate(".signup__form", {
+  errorFieldCssClass: "error",
+  errorLabelCssClass: "signup__error-message",
+  errorsContainer: document.querySelector("#email-error"),
 });
 
-// Handle dismiss button
-document.querySelector(".success-message__dismiss-btn").addEventListener("click", () => {
-  signup.classList.remove("signup--success");
-  signupForm.reset(); 
-  successContainer.style.display = "none";
-  formContainer.style.display = "flex"; 
+validator
+  .addField("#email", [
+    {
+      rule: "required",
+      errorMessage: "Email is required",
+    },
+    {
+      rule: "email",
+      errorMessage: "Invalid Email address",
+    },
+  ])
+  .onSuccess((event) => {
+    event.preventDefault();
+
+   
+      successContainer.classList.toggle("hidden", false);
+      formContainer.classList.toggle("hidden", true);
+
+  });
+
+dismissBtn.addEventListener("click", () => {
+
+successContainer.classList.toggle("hidden", true);
+formContainer.classList.toggle("hidden", false);
+
+  signupForm.reset();
 });
